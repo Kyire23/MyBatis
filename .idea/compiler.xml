@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mybatis-3-webapp" />
+        <module name="junit-test" />
+        <module name="mybatis-10-cache" />
+        <module name="mybatis-4-tips" />
+        <module name="mybatis-5-antic" />
+        <module name="mybatis-2.0-crud" />
+        <module name="mybatis-7-select" />
+        <module name="mybatis-9-advanced-mapping" />
+        <module name="mybatis-9-advanced-mappings" />
+        <module name="mybatis-8-dynamic-sql" />
+        <module name="mybatis-1.0-pro" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="junit-test" target="8" />
+      <module name="mybatis-1.0-pro" target="8" />
+      <module name="mybatis-10-cache" target="8" />
+      <module name="mybatis-11-generator" target="8" />
+      <module name="mybatis-2.0-crud" target="8" />
+      <module name="mybatis-3-webapp" target="1.7" />
+      <module name="mybatis-4-tips" target="8" />
+      <module name="mybatis-5-antic" target="8" />
+      <module name="mybatis-6-param" target="8" />
+      <module name="mybatis-7-select" target="8" />
+      <module name="mybatis-8-dynamic-sql" target="8" />
+      <module name="mybatis-9-advanced-mapping" target="8" />
+      <module name="mybatis-9-advanced-mappings" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

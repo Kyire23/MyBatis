@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oumuanode.mybatis.mapper.CarMapper2">
+    <select id="selectByMultiCondition" resultType="Car">
+        select * from t_car where 1=1
+        <if test="brand != null and brand != ''">
+            brand like "%"#{brand}"%"
+        </if>
+        <if test="guidePrice != null and guidePrice != ''">
+            and guide_price >= #{guidePrice}
+        </if>
+        <if test="carType != null and carType != ''">
+            and car_type = #{carType}
+        </if>
+    </select>
+
+    <!--    <select id="selectByMultiConditionWithWhere" resultType="Car">-->
+    <!--        select * from t_car-->
+    <!--        <where>-->
+    <!--            <if test="brand != null and brand != ''">-->
+    <!--                and brand like "%"#{brand}"%"-->
+    <!--            </if>-->
+    <!--            <if test="guidePrice != null and guidePrice != ''">-->
+    <!--                and guide_price >= #{guidePrice}-->
+    <!--            </if>-->
+    <!--            <if test="carType != null and carType != ''">-->
+    <!--                and car_type = #{carType}-->
+    <!--            </if>-->
+    <!--        </where>-->
+    <!--    </select>-->
+
+    <select id="selectByMultiConditionWithWhere" resultType="Car">
+        select * from t_car
+        <where>
+            <if test="brand != null and brand != ''">
+                or brand like "%"#{brand}"%"
+            </if>
+            <if test="guidePrice != null and guidePrice != ''">
+                and guide_price >= #{guidePrice}
+            </if>
+            <if test="carType != null and carType != ''">
+                and car_type = #{carType}
+            </if>
+        </where>
+    </select>
+
+    <!--    prefix：在trim标签中的语句前添加内容-->
+    <!--    suffix：在trim标签中的语句后添加内容-->
+    <!--    prefixOverrides：前缀覆盖掉（去掉）-->
+    <!--    suffixOverrides：后缀覆盖掉（去掉）-->
+    <select id="selectByMultiConditionWithTrim" resultType="Car">
+        select * from t_car
+        <trim prefix="where" suffixOverrides="and|or">
+            <if test="brand != null and brand != ''">
+                brand like "%"#{brand}"%" and
+            </if>
+            <if test="guidePrice != null and guidePrice != ''">
+                guide_price >= #{guidePrice} and
+            </if>
+            <if test="carType != null and carType != ''">
+                car_type = #{carType}
+            </if>
+        </trim>
+    </select>
+
+    <update id="updateWithSet">
+        update t_car
+        <set>
+            <if test="carNum != null and carNum != ''">
+                car_num = #{carNum},
+            </if>
+            <if test="brand != null and brand != ''">
+                brand = #{brand},
+            </if>
+            <if test="guidePrice != null and guidePrice != ''">
+                guide_price = #{guidePrice},
+            </if>
+            <if test="produceTime != null and produceTime != ''">
+                produce_time = #{produceTime},
+            </if>
+            <if test="carType != null and carType != ''">
+                car_type = #{carType},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <select id="selectByChoose" resultType="Car">
+        select * from t_car
+        <where>
+            <choose>
+                <when test="brand != null and brand != '' ">
+                    brand like "%"#{brand}"%"
+                </when>
+
+                <when test="guidePrice != null and guidePrice != ''">
+                    guide_price >= #{guidePrice}
+                </when>
+                <otherwise>
+                    produce_time >= #{produceTime}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+
+    <delete id="deleteBatchByForeachWithIn">
+        delete from t_car where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+    <delete id="deleteBatchByForeachWithOr">
+        delete from t_car where
+        <foreach collection="ids" item="id" separator="or">
+            id = #{id}
+        </foreach>
+    </delete>
+
+
+    <insert id="insertBatchByForeach">
+        insert into t_car values
+        <foreach collection="cars" item="car" separator=",">
+            (null, #{car.carNum}, #{car.brand}, #{car.guidePrice}, #{car.produceTime}, #{car.carType})
+        </foreach>
+    </insert>
+
+    <sql id="carCols">
+        id,
+    car_num as carNum,
+    brand,
+    guide_price as guidePrice,
+    produce_time as produceTime,
+    car_type as carType
+    </sql>
+    <select id="selectAll" resultType="com.oumuanode.mybatis.pojo.Car">
+        select
+        <include refid="carCols"></include>
+        from t_car
+    </select>
+
+
+</mapper>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oumuanode.mybatis.mapper.StudentMapper">
+
+    <select id="selectByMultiParam" resultType="Student">
+        select * from t_student
+        where name=#{0} and sex=#{1}
+    </select>
+
+
+    <insert id="insertByPOJO">
+       insert into t_student
+       values (null ,#{name},#{age}, #{height}, #{birth}, #{sex})
+   </insert>
+
+    <select id="selectByName" resultType="Student">
+        select * from t_student where name=#{name}
+    </select>
+
+    <select id="selectById" resultType="Student">
+        select * from t_student where id=#{id}
+    </select>
+
+    <select id="selectByBirth" resultType="Student">
+        select * from t_student where birth=#{birth}
+    </select>
+
+    <select id="selectBySex" resultType="Student">
+        select * from t_student where sex=#{sex}
+    </select>
+
+    <select id="selectByParaMap" resultType="Student">
+        select  * from t_student where name=#{nameKey} and age=#{ageKey}
+    </select>
+
+</mapper>

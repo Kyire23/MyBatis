@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyBatis.iml" filepath="$PROJECT_DIR$/MyBatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/junit-test/junit-test.iml" filepath="$PROJECT_DIR$/junit-test/junit-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-011-generator/mybatis-011-generator.iml" filepath="$PROJECT_DIR$/mybatis-011-generator/mybatis-011-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-1.0-pro/mybatis-1.0-pro.iml" filepath="$PROJECT_DIR$/mybatis-1.0-pro/mybatis-1.0-pro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-10-cache/mybatis-10-cache.iml" filepath="$PROJECT_DIR$/mybatis-10-cache/mybatis-10-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-11-generator/mybatis-11-generator.iml" filepath="$PROJECT_DIR$/mybatis-11-generator/mybatis-11-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-2.0-crud/mybatis-2.0-crud.iml" filepath="$PROJECT_DIR$/mybatis-2.0-crud/mybatis-2.0-crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-3-webapp/mybatis-3-webapp.iml" filepath="$PROJECT_DIR$/mybatis-3-webapp/mybatis-3-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-4-tips/mybatis-4-tips.iml" filepath="$PROJECT_DIR$/mybatis-4-tips/mybatis-4-tips.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-5-antic/mybatis-5-antic.iml" filepath="$PROJECT_DIR$/mybatis-5-antic/mybatis-5-antic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-6-param/mybatis-6-param.iml" filepath="$PROJECT_DIR$/mybatis-6-param/mybatis-6-param.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-7-select/mybatis-7-select.iml" filepath="$PROJECT_DIR$/mybatis-7-select/mybatis-7-select.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-8-dynamic-sql/mybatis-8-dynamic-sql.iml" filepath="$PROJECT_DIR$/mybatis-8-dynamic-sql/mybatis-8-dynamic-sql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-8.1-dynamic-sql/mybatis-9-advanced-mapping.iml" filepath="$PROJECT_DIR$/mybatis-8.1-dynamic-sql/mybatis-9-advanced-mapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-9-advanced-mappings/mybatis-9-advanced-mappings.iml" filepath="$PROJECT_DIR$/mybatis-9-advanced-mappings/mybatis-9-advanced-mappings.iml" />
+    </modules>
+  </component>
+</project>

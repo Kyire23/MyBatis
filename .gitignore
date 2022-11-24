@@ -1,0 +1,12 @@
+# Project exclude paths
+/junit-test/target/
+/mybatis-1.0-pro/target/
+/mybatis-2.0-crud/target/
+/mybatis-3-webapp/target/
+/mybatis-4-tips/target/
+/mybatis-5-antic/target/
+/mybatis-6-param/target/
+/mybatis-7-select/target/
+/mybatis-8-dynamic-sql/target/
+/mybatis-9-advanced-mappings/target/
+/mybatis-10-cache/target/
